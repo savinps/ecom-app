@@ -22,9 +22,11 @@ class SignUp extends React.Component {
     handleSubmit = async event => {
         event.preventDefault();
 
+        console.log("new user");
+
         const { displayName, email, password, confirmPassword } = this.state;
 
-        if(password !== confirmPasword) {
+        if(password !== confirmPassword) {
             alert("Passwords don't match");
             return;
         }
@@ -97,7 +99,7 @@ class SignUp extends React.Component {
                     >
                     </FormInput>
 
-                    <CustomButtom type='submit'>SIGN UP</CustomButtom>
+                    <CustomButton type='submit'>SIGN UP</CustomButton>
                 </form>
             </div>
 
